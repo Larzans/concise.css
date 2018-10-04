@@ -16,16 +16,16 @@
 
   @if($enable-container-solid) {
     [#{$prefix}container~="solid"] {
-      @media(--small) {
+      @media(min-width: #{$break-small}) { // (width >= #{$break-small});
         max-width: $break-small;
       }
-      @media(--medium) {
+      @media(min-width: #{$break-medium}) {  // (width >= #{$break-medium});
         max-width: $break-medium;
       }
-      @media(--large) {
+      @media(min-width: #{$break-large}) { // (width >= #{$break-large});
         max-width: $break-large;
       }
-      @media(--extra-large) {
+      @media(min-width: #{$break-extra-large}) { // (width >= #{$break-extra-large});
         max-width: $container-width;
       }
     }
@@ -145,7 +145,7 @@
   }
 
   @if ($full-grid) {
-    @media (--extra-small) {
+    @media (max-width: #{$break-small - 1}) { // (width < #{$break-small});
       //
       // Column widths
       //
@@ -166,7 +166,7 @@
       }
     }
 
-    @media (--small) {
+    @media (min-width: #{$break-small}) { // (width >= #{$break-small});
       //
       // Column widths
       //
@@ -187,7 +187,7 @@
       }
     }
 
-    @media (--medium) {
+    @media (min-width: #{$break-medium}) {  // (width >= #{$break-medium}
       //
       // Column widths
       //
@@ -208,7 +208,7 @@
       }
     }
 
-    @media (--large) {
+    @media (min-width: #{$break-large}) { // (width >= #{$break-large});
       //
       // Column widths
       //
@@ -229,7 +229,7 @@
       }
     }
 
-    @media (--extra-large) {
+    @media (min-width: #{$break-extra-large}) { // (width >= #{$break-extra-large});
       //
       // Column widths
       //
