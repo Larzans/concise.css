@@ -29,10 +29,10 @@ $block-margin: 1lh !default;
 $transition-duration: 150ms !default;
 
 // Break points
-$break-small: 480px;
-$break-medium: 768px;
-$break-large: 960px;
-$break-extra-large: 1100px;
+$break-small: 480px !default;
+$break-medium: 768px !default;
+$break-large: 960px !default;
+$break-extra-large: 1100px !default;
 
 // Custom media queries
 // Use as @media (--medium) { … }
